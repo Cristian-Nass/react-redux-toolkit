@@ -30,16 +30,13 @@ export const counterSlice = createSlice({
 
   extraReducers: (builder) => {
     builder
-      .addCase(incrementAsync.pending, () => {
-        console.log("Increment async Pending");
-      })
-      .addCase(
-        incrementAsync.fulfilled,
-        (state, action: PayloadAction<number>) => {
-          state.value += action.payload;
-        }
-      );
-  },
+    .addCase(incrementAsync.pending, () => {
+        console.log('Increment async')
+    })
+    .addCase(incrementAsync.fulfilled, (state, action: PayloadAction<number>) => {
+        state.value += action.payload
+    })
+  }
 });
 
 export const incrementAsync = createAsyncThunk(
