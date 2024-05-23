@@ -56,12 +56,25 @@
 }
 
 @media (max-width: 600px) {
+  .navbar {
+    justify-content: flex-end;
+  }
+
+  .navbar-logo {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .hamburger {
+    order: 1;
+  }
+
   .nav-links {
     flex-direction: column;
     width: 200px;
     position: absolute;
     top: 60px;
-    right: 0;
+    left: 0;
     background: #333;
     padding: 1rem;
     border: 1px solid #444;
